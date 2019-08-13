@@ -120,10 +120,12 @@
 <meta property="og:site_name" content="Nine&#39;s Blog">
 <meta property="og:description" content="springCloud学习笔记，初步接触了解springCloud！">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-08-13T02:47:20.969Z">
+<meta property="og:image" content="https://ronghua-yu-blog.oss-cn-beijing.aliyuncs.com/%E5%9B%BE%E5%BA%8A/bolg/SpringCloud%E7%BB%84%E4%BB%B6%E7%A4%BA%E6%84%8F%E5%9B%BE.png?x-oss-process=style/blog&Expires=1565687435&OSSAccessKeyId=TMP.hWygYtZqkqGsDXAZfBTbAzcnrVibcHLFHTFq6i1QfUkc2W3TjbQvndMLLoDPaKi8zt2B7wbDyMTscwqND1yVrmwiYn2e9mCFjsRgynKw2o3ieN46qATQSn71NVNyPU.tmp&Signature=NRIAAbJLWILfo26PU35AUmI8hhA%3D">
+<meta property="og:updated_time" content="2019-08-13T09:35:49.843Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="SpringCloud">
 <meta name="twitter:description" content="springCloud学习笔记，初步接触了解springCloud！">
+<meta name="twitter:image" content="https://ronghua-yu-blog.oss-cn-beijing.aliyuncs.com/%E5%9B%BE%E5%BA%8A/bolg/SpringCloud%E7%BB%84%E4%BB%B6%E7%A4%BA%E6%84%8F%E5%9B%BE.png?x-oss-process=style/blog&Expires=1565687435&OSSAccessKeyId=TMP.hWygYtZqkqGsDXAZfBTbAzcnrVibcHLFHTFq6i1QfUkc2W3TjbQvndMLLoDPaKi8zt2B7wbDyMTscwqND1yVrmwiYn2e9mCFjsRgynKw2o3ieN46qATQSn71NVNyPU.tmp&Signature=NRIAAbJLWILfo26PU35AUmI8hhA%3D">
 
 
 
@@ -442,7 +444,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  320 字
+                  2k 字
                 </span>
               
 
@@ -458,7 +460,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  1 分钟
+                  6 分钟
                 </span>
               
             </div>
@@ -493,8 +495,7 @@
 <li><p>Spring Cloud 其他组件</p>
 </li>
 </ol>
-<h2 id="Spring-Cloud-微服务架构"><a href="#Spring-Cloud-微服务架构" class="headerlink" title="Spring Cloud 微服务架构"></a>Spring Cloud 微服务架构</h2><ol>
-<li>什么是微服务<ol>
+<h2 id="Spring-Cloud-微服务架构"><a href="#Spring-Cloud-微服务架构" class="headerlink" title="Spring Cloud 微服务架构"></a>Spring Cloud 微服务架构</h2><h3 id="什么是微服务"><a href="#什么是微服务" class="headerlink" title="什么是微服务"></a>什么是微服务</h3><ol>
 <li><strong>集群</strong>：通过一组集成得计算机软件和/或硬件连接起来高度紧密得协作完成计算机工作。<ol>
 <li><strong>高性能</strong>:通过多台计算机完成统一工作，分摊压力，达到跟高得效率</li>
 <li><strong>高可用</strong>：两机或多机工作内容、过程完全一致，可以互相顶替</li>
@@ -506,22 +507,33 @@
 </ol>
 </li>
 <li><strong>集群和分布式并不冲突</strong></li>
-<li>CAP理论：强一致性（C）、极致可用性（A）、分区容错性（P）<ol>
-<li>网上很多资源可以查阅，待补充</li>
+<li>CAP理论：强一致性（C）、极致可用性（A）、分区容错性（P）</li>
 </ol>
-</li>
-</ol>
-</li>
-<li>什么是 Spring Cloud<ol>
+<h3 id="什么是-Spring-Cloud"><a href="#什么是-Spring-Cloud" class="headerlink" title="什么是 Spring Cloud"></a>什么是 Spring Cloud</h3><p>​        当我们了解集群和分布式这两个概念之后，我们来看看什么是Spring Cloud，在这之前我们先回顾一下Spring Boot，Spring Boot是比较合适基于spring的快速开发，用于搭建一个单体的小型项目非常方便。这里为什么提Spring boot呢？因为Spring Cloud就是基于Spring Boot实现的。</p>
+<ol>
 <li>Spring Cloud提供了分布式系统的一整套的解决方案</li>
 <li>Spring Cloud提供了快速构建分布式系统中的一些常见模式的组件</li>
 </ol>
+<p>ps：前面对集群和分布式讲解是从概念上进行理解的，当我们落实到实现上时，可能会约到各种各样的问题，随着分布式架构的发展，慢慢的有一些优秀的架构设计，还有一些组件就会被广泛的应用，Spring Cloud就为常见的架构提供一些通用的组件。</p>
+<h3 id="Spring-Cloud-组件"><a href="#Spring-Cloud-组件" class="headerlink" title="Spring Cloud 组件"></a>Spring Cloud 组件</h3><p>下面我们通过一个图来了解Spring Cloud为分布式系统提供的组件</p>
+<p><img src="https://ronghua-yu-blog.oss-cn-beijing.aliyuncs.com/%E5%9B%BE%E5%BA%8A/bolg/SpringCloud%E7%BB%84%E4%BB%B6%E7%A4%BA%E6%84%8F%E5%9B%BE.png?x-oss-process=style/blog&Expires=1565687435&OSSAccessKeyId=TMP.hWygYtZqkqGsDXAZfBTbAzcnrVibcHLFHTFq6i1QfUkc2W3TjbQvndMLLoDPaKi8zt2B7wbDyMTscwqND1yVrmwiYn2e9mCFjsRgynKw2o3ieN46qATQSn71NVNyPU.tmp&Signature=NRIAAbJLWILfo26PU35AUmI8hhA%3D" alt="SpringCloud示意图"></p>
+<h4 id="服务"><a href="#服务" class="headerlink" title="服务"></a>服务</h4><p>​        假设我们需要利用Spring Boot开发一个单独的系统，但是随着我们系统的开发，一个单体的应用程序可能会变得非常的臃肿，整个应用程序会变得非常庞大，代码量和功能都会变得很多。这时我们按照分布式的概念将服务进行拆分，如上图，此时出现了橙、蓝、黄三个服务，每个服务只专注自己的功能。</p>
+<h4 id="注册中心"><a href="#注册中心" class="headerlink" title="注册中心"></a>注册中心</h4><p>​        但是当我们拆分为多个服务之后，服务之间难免会出现互相通信的时候，这个时候我们可能需要在服务中去维护其他服务的ip，这就略显麻烦了。当我们在服务器集群中使用容器化部署的时候我们就会遇到一个更加灾难性的问题——我们每次部署的ip可能会变化，那么这个ip的维护工作就会变得非常繁琐。为了解决这个问题，Spring Cloud提供了一个组件叫<strong>注册中心</strong>，有了注册中心这个组件之后，每个服务不再像之前一样在服务内去维护其他服务的ip，而是将自己的ip维护到注册中心，这样注册中心就会有一个完整的服务列表，如果需要进行服务间的调用，我们只需要去注册中心拉去服务列表，去获取对应服务的ip就可以了。</p>
+<h4 id="负载均衡——Ribbon"><a href="#负载均衡——Ribbon" class="headerlink" title="负载均衡——Ribbon"></a>负载均衡——Ribbon</h4><p>​        解决了最基本的通信问题之后，随着系统的不断扩展，我们会发现即使服务进行了划分，我们某个服务可能会遇到性能上的瓶颈，这时我们想到一个办法——<strong>将调用比较频繁的服务进行集群部署</strong>。例如上图，将第一个服务部署成两个节点，此时系统的压力会得到一定的缓解。但是这个时候我们又遇到了一个新的问题——<strong>服务件调用的时候我们需要进行一个决策</strong>。例如第二个服务和第三个服务需要调用第一个服务，但是第一个服务有两个节点，我们需要对集群的调用做<strong>负载均衡</strong>，不然调用请求集中发到一个节点上，这样还是会导致这个节点服务器压力特别大。这个时候，Spring Cloud为我们提供了一个组件——<strong>Ribbon</strong>，这个组件就是为了处理一个服务多实例下的负载均衡。</p>
+<h4 id="熔断限流——Hystrix"><a href="#熔断限流——Hystrix" class="headerlink" title="熔断限流——Hystrix"></a>熔断限流——Hystrix</h4><p>​        当我们有了负载均衡之后，我们的系统能正常运行，但是这样还不够，比如我们做了集群和负载均衡，第一个服务的压力还是非常大，这时服务间的调用可能会有阻塞，当服务调用发生了阻塞，又无节制的去向第一个服务发送请求，很可能会导致第一个服务宕机。Spring Cloud为了避免这种情况为我们提供了一个新的组件——<strong>Hystrix</strong>。这个组件的功能是<strong>熔断</strong>和<strong>限流</strong>，也就是当我们的请求无法得到响应的时候，它会中断我们的请求，并限制我们的请求调用，通过这种机制我们就能避免系统长时间无响应、服务器压力过高。</p>
+<h4 id="API网关"><a href="#API网关" class="headerlink" title="API网关"></a>API网关</h4><p>​        在有了熔断和限流之后，我们系统的内部组件已经比较完整了，但这时我们又会遇到一个微服务带来的问题——用户通过web端或客户端访问我们的系统时，它需要访问多个服务，此时我们就需要在web端或者客户端去维护我们多个服务的服务信息，这与服务去维护其他服务信息一样，是非常让人头疼的。除了这个问题之外，我们还会遇到另一个问题，通常情况下，我们的系统都系统做认证和授权，针对这种分布式的场景，每个服务还需要自己去实现权限校验的功能，也就是说无形中，我们分布式系统实现的代价就高了。为了解决这个问题，Spring Cloud引入了一个组件——<strong>API网关</strong>，API网关也是注册到注册中心，它的功能就是<strong>统一对外的入口</strong>，请求不再访问指定的服务，而是同意从网关访问，网关会通过一系列的过滤，最终将请求转发到对应的服务上。</p>
+<h4 id="授权服务"><a href="#授权服务" class="headerlink" title="授权服务"></a>授权服务</h4><p>​        我们可以统一入口，那么我们也可以做一些其他的统一操作，比如授权，我们可以在网关中添加权限过滤，这样就不需要在每个服务中单独做服务校验了。</p>
+<h3 id="Spring-Cloud-常用组件"><a href="#Spring-Cloud-常用组件" class="headerlink" title="Spring Cloud 常用组件"></a>Spring Cloud 常用组件</h3><p>通过上面的介绍，我们了解了 Spring Cloud 为我们提供的一些组件，也了解了 Spring Cloud 的架构，下面我们进行总结：</p>
+<ul>
+<li>服务治理：Spring Cloud Eureka</li>
+<li>负载均衡：Spring Cloud Ribbon</li>
+<li>熔断限流：Spring Cloud Hystrix</li>
+<li>服务调用：Spring Cloud Feign<ul>
+<li>发起一个请求，原始的情况是使用httpclient，或者是采用spring封装过的resttemplate，但是这两个还是相对比较繁琐的，Feign的存在就是为了简化内部调用，它提供了声明性来提供内部调用，不需要自己再去实现http请求，我们只需要定义一个接口，它就能自动帮我们封装成一个http请求，Feign的实现也是基于resttemplate</li>
+</ul>
 </li>
-<li>Spring Cloud 组件<ol>
-<li></li>
-</ol>
-</li>
-</ol>
+<li>网关服务：Spring Cloud Zuul</li>
+</ul>
 
       
     </div>
@@ -540,7 +552,7 @@
   <p><span>本文标题:</span><a href="/springCloud.html">SpringCloud</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 九哥 的个人博客">九哥</a></p>
   <p><span>发布时间:</span>2019年08月09日 - 19:08</p>
-  <p><span>最后更新:</span>2019年08月13日 - 10:08</p>
+  <p><span>最后更新:</span>2019年08月13日 - 17:08</p>
   <p><span>原始链接:</span><a href="/springCloud.html" title="SpringCloud">yrhcoding.top/springCloud.html</a>
     <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="yrhcoding.top/springCloud.html" aria-label="复制成功！"></i></span>
   </p>
@@ -796,7 +808,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Spring-Cloud"><span class="nav-number">1.</span> <span class="nav-text">Spring Cloud</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Spring-Cloud-微服务架构"><span class="nav-number">1.1.</span> <span class="nav-text">Spring Cloud 微服务架构</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Spring-Cloud"><span class="nav-number">1.</span> <span class="nav-text">Spring Cloud</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Spring-Cloud-微服务架构"><span class="nav-number">1.1.</span> <span class="nav-text">Spring Cloud 微服务架构</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#什么是微服务"><span class="nav-number">1.1.1.</span> <span class="nav-text">什么是微服务</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#什么是-Spring-Cloud"><span class="nav-number">1.1.2.</span> <span class="nav-text">什么是 Spring Cloud</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Spring-Cloud-组件"><span class="nav-number">1.1.3.</span> <span class="nav-text">Spring Cloud 组件</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#服务"><span class="nav-number">1.1.3.1.</span> <span class="nav-text">服务</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#注册中心"><span class="nav-number">1.1.3.2.</span> <span class="nav-text">注册中心</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#负载均衡——Ribbon"><span class="nav-number">1.1.3.3.</span> <span class="nav-text">负载均衡——Ribbon</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#熔断限流——Hystrix"><span class="nav-number">1.1.3.4.</span> <span class="nav-text">熔断限流——Hystrix</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#API网关"><span class="nav-number">1.1.3.5.</span> <span class="nav-text">API网关</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#授权服务"><span class="nav-number">1.1.3.6.</span> <span class="nav-text">授权服务</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Spring-Cloud-常用组件"><span class="nav-number">1.1.4.</span> <span class="nav-text">Spring Cloud 常用组件</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
@@ -830,7 +842,7 @@
     
       <span class="post-meta-item-text">本站总字数&#58;</span>
     
-    <span title="本站总字数">393</span>
+    <span title="本站总字数">2k</span>
   
 </div>
 
