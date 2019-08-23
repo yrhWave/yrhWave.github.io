@@ -120,12 +120,12 @@
 <meta property="og:site_name" content="Nine&#39;s Blog">
 <meta property="og:description" content="Spring Cloud 微服务架构， Spring Cloud组件介绍">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="https://ronghua-yu-blog.oss-cn-beijing.aliyuncs.com/%E5%9B%BE%E5%BA%8A/bolg/SpringCloud%E7%BB%84%E4%BB%B6%E7%A4%BA%E6%84%8F%E5%9B%BE.png?x-oss-process=style/blog&Expires=1565693813&OSSAccessKeyId=TMP.hWygYtZqkqGsDXAZfBTbAzcnrVibcHLFHTFq6i1QfUkc2W3TjbQvndMLLoDPaKi8zt2B7wbDyMTscwqND1yVrmwiYn2e9mCFjsRgynKw2o3ieN46qATQSn71NVNyPU.tmp&Signature=i9o4yQxHr0FGQvRYFIy7hgWsE6g%3D">
-<meta property="og:updated_time" content="2019-08-13T10:00:53.642Z">
+<meta property="og:image" content="https://ronghua-yu-blog.oss-cn-beijing.aliyuncs.com/%E5%9B%BE%E5%BA%8A/blog/SpringCloud%E7%BB%84%E4%BB%B6%E7%A4%BA%E6%84%8F%E5%9B%BE.png">
+<meta property="og:updated_time" content="2019-08-23T08:25:55.416Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="SpringCloud">
 <meta name="twitter:description" content="Spring Cloud 微服务架构， Spring Cloud组件介绍">
-<meta name="twitter:image" content="https://ronghua-yu-blog.oss-cn-beijing.aliyuncs.com/%E5%9B%BE%E5%BA%8A/bolg/SpringCloud%E7%BB%84%E4%BB%B6%E7%A4%BA%E6%84%8F%E5%9B%BE.png?x-oss-process=style/blog&Expires=1565693813&OSSAccessKeyId=TMP.hWygYtZqkqGsDXAZfBTbAzcnrVibcHLFHTFq6i1QfUkc2W3TjbQvndMLLoDPaKi8zt2B7wbDyMTscwqND1yVrmwiYn2e9mCFjsRgynKw2o3ieN46qATQSn71NVNyPU.tmp&Signature=i9o4yQxHr0FGQvRYFIy7hgWsE6g%3D">
+<meta name="twitter:image" content="https://ronghua-yu-blog.oss-cn-beijing.aliyuncs.com/%E5%9B%BE%E5%BA%8A/blog/SpringCloud%E7%BB%84%E4%BB%B6%E7%A4%BA%E6%84%8F%E5%9B%BE.png">
 
 
 
@@ -516,7 +516,7 @@
 </ol>
 <p>ps：前面对集群和分布式讲解是从概念上进行理解的，当我们落实到实现上时，可能会约到各种各样的问题，随着分布式架构的发展，慢慢的有一些优秀的架构设计，还有一些组件就会被广泛的应用，Spring Cloud就为常见的架构提供一些通用的组件。</p>
 <h3 id="Spring-Cloud-组件"><a href="#Spring-Cloud-组件" class="headerlink" title="Spring Cloud 组件"></a>Spring Cloud 组件</h3><p>下面我们通过一个图来了解Spring Cloud为分布式系统提供的组件</p>
-<p><img src="https://ronghua-yu-blog.oss-cn-beijing.aliyuncs.com/%E5%9B%BE%E5%BA%8A/bolg/SpringCloud%E7%BB%84%E4%BB%B6%E7%A4%BA%E6%84%8F%E5%9B%BE.png?x-oss-process=style/blog&Expires=1565693813&OSSAccessKeyId=TMP.hWygYtZqkqGsDXAZfBTbAzcnrVibcHLFHTFq6i1QfUkc2W3TjbQvndMLLoDPaKi8zt2B7wbDyMTscwqND1yVrmwiYn2e9mCFjsRgynKw2o3ieN46qATQSn71NVNyPU.tmp&Signature=i9o4yQxHr0FGQvRYFIy7hgWsE6g%3D" alt="SpringCloud组件示意图"></p>
+<p><img src="https://ronghua-yu-blog.oss-cn-beijing.aliyuncs.com/%E5%9B%BE%E5%BA%8A/blog/SpringCloud%E7%BB%84%E4%BB%B6%E7%A4%BA%E6%84%8F%E5%9B%BE.png" alt="SpringCloud组件示意图"></p>
 <h4 id="服务"><a href="#服务" class="headerlink" title="服务"></a>服务</h4><p>​        假设我们需要利用Spring Boot开发一个单独的系统，但是随着我们系统的开发，一个单体的应用程序可能会变得非常的臃肿，整个应用程序会变得非常庞大，代码量和功能都会变得很多。这时我们按照分布式的概念将服务进行拆分，如上图，此时出现了橙、蓝、黄三个服务，每个服务只专注自己的功能。</p>
 <h4 id="注册中心"><a href="#注册中心" class="headerlink" title="注册中心"></a>注册中心</h4><p>​        但是当我们拆分为多个服务之后，服务之间难免会出现互相通信的时候，这个时候我们可能需要在服务中去维护其他服务的ip，这就略显麻烦了。当我们在服务器集群中使用容器化部署的时候我们就会遇到一个更加灾难性的问题——我们每次部署的ip可能会变化，那么这个ip的维护工作就会变得非常繁琐。为了解决这个问题，Spring Cloud提供了一个组件叫<strong>注册中心</strong>，有了注册中心这个组件之后，每个服务不再像之前一样在服务内去维护其他服务的ip，而是将自己的ip维护到注册中心，这样注册中心就会有一个完整的服务列表，如果需要进行服务间的调用，我们只需要去注册中心拉去服务列表，去获取对应服务的ip就可以了。</p>
 <h4 id="负载均衡——Ribbon"><a href="#负载均衡——Ribbon" class="headerlink" title="负载均衡——Ribbon"></a>负载均衡——Ribbon</h4><p>​        解决了最基本的通信问题之后，随着系统的不断扩展，我们会发现即使服务进行了划分，我们某个服务可能会遇到性能上的瓶颈，这时我们想到一个办法——<strong>将调用比较频繁的服务进行集群部署</strong>。例如上图，将第一个服务部署成两个节点，此时系统的压力会得到一定的缓解。但是这个时候我们又遇到了一个新的问题——<strong>服务件调用的时候我们需要进行一个决策</strong>。例如第二个服务和第三个服务需要调用第一个服务，但是第一个服务有两个节点，我们需要对集群的调用做<strong>负载均衡</strong>，不然调用请求集中发到一个节点上，这样还是会导致这个节点服务器压力特别大。这个时候，Spring Cloud为我们提供了一个组件——<strong>Ribbon</strong>，这个组件就是为了处理一个服务多实例下的负载均衡。</p>
@@ -552,7 +552,7 @@
   <p><span>本文标题:</span><a href="/Spring Cloud 微服务架构.html">SpringCloud</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 九哥 的个人博客">九哥</a></p>
   <p><span>发布时间:</span>2019年08月09日 - 19:08</p>
-  <p><span>最后更新:</span>2019年08月13日 - 18:08</p>
+  <p><span>最后更新:</span>2019年08月23日 - 16:08</p>
   <p><span>原始链接:</span><a href="/Spring Cloud 微服务架构.html" title="SpringCloud">yrhcoding.top/Spring Cloud 微服务架构.html</a>
     <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="yrhcoding.top/Spring Cloud 微服务架构.html" aria-label="复制成功！"></i></span>
   </p>
@@ -639,8 +639,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/GitHub-hexo搭建个人博客详细教程.html" rel="prev" title="GitHub+hexo搭建个人博客详细教程">
-                GitHub+hexo搭建个人博客详细教程 <i class="fa fa-chevron-right"></i>
+              <a href="/Spring学习总结.html" rel="prev" title="Spring">
+                Spring <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -723,7 +723,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-count">3</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -734,7 +734,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">1</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
