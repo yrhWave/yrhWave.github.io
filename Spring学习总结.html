@@ -121,8 +121,8 @@
 <meta property="og:description" content="spring框架知识点总结，IOC、AOP、DI等重要概念原理">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://ronghua-yu-blog.oss-cn-beijing.aliyuncs.com/%E5%9B%BE%E5%BA%8A/blog/Spring%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84%E5%9B%BE.jpg">
-<meta property="og:image" content="https://ronghua-yu-blog.oss-cn-beijing.aliyuncs.com/%E5%9B%BE%E5%BA%8A/bolg/applicationContext%E7%BB%A7%E6%89%BF%E7%BB%93%E6%9E%84.png?x-oss-process=style/blog&Expires=1566308170&OSSAccessKeyId=TMP.hWNTLU5B5C3BgNqB5kSKSZ2rRK5wuqybEyutgWmV7YLBP6MmsGa1qDZiDBk3M9tueXYX2NWdQRUdLJrFyuaLgLneB6PmdL3ErGd4CRnZJGWcKbkWdKWLxAkAvC8eS1.tmp&Signature=tWX6rAAx5eMc0vDdGyFYjiSwfKs%3D">
-<meta property="og:updated_time" content="2019-08-23T08:08:38.933Z">
+<meta property="og:image" content="https://ronghua-yu-blog.oss-cn-beijing.aliyuncs.com/%E5%9B%BE%E5%BA%8A/blog/applicationContext%E7%BB%A7%E6%89%BF%E7%BB%93%E6%9E%84.png">
+<meta property="og:updated_time" content="2019-08-23T08:50:28.275Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Spring">
 <meta name="twitter:description" content="spring框架知识点总结，IOC、AOP、DI等重要概念原理">
@@ -536,7 +536,7 @@
 
 <h4 id="ApplicationContext"><a href="#ApplicationContext" class="headerlink" title="ApplicationContext"></a>ApplicationContext</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ApplicationContext app = <span class="keyword">new</span> ClassPathXmlApplicationContext(<span class="string">"配置文件.xml"</span>);</span><br><span class="line">  类名 对象名 =(类名)app.getBean(<span class="string">" "</span>);</span><br></pre></td></tr></table></figure>
 
-<p><img src="https://ronghua-yu-blog.oss-cn-beijing.aliyuncs.com/%E5%9B%BE%E5%BA%8A/bolg/applicationContext%E7%BB%A7%E6%89%BF%E7%BB%93%E6%9E%84.png?x-oss-process=style/blog&Expires=1566308170&OSSAccessKeyId=TMP.hWNTLU5B5C3BgNqB5kSKSZ2rRK5wuqybEyutgWmV7YLBP6MmsGa1qDZiDBk3M9tueXYX2NWdQRUdLJrFyuaLgLneB6PmdL3ErGd4CRnZJGWcKbkWdKWLxAkAvC8eS1.tmp&Signature=tWX6rAAx5eMc0vDdGyFYjiSwfKs%3D" alt="ApplicationContext"></p>
+<p><img src="https://ronghua-yu-blog.oss-cn-beijing.aliyuncs.com/%E5%9B%BE%E5%BA%8A/blog/applicationContext%E7%BB%A7%E6%89%BF%E7%BB%93%E6%9E%84.png" alt="ApplicationContext"></p>
 <p>从 ApplicationContext 的继承机构可以看到，ApplicationContext 继承了BeanFactory，也就是说，ApplicationContext拥有BeanFactory的全部功能。ApplicationContext 是通过将容器的功能委派给DefaultListableBeanFactory来实现。除了继承BeanFactory，还有ResourceLoader、EnvironmentCapable、ApplicationEventPublisher、MessageSource等接口，也就说明ApplicationContext 除了容器的功能外，还囊括了资源的处理、环境、事件发布、国际化等。</p>
 <h4 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">&lt;?xml version=<span class="string">"1.0"</span> encoding=<span class="string">"UTF-8"</span>?&gt;</span><br><span class="line">&lt;beans xmlns=<span class="string">"http://www.springframework.org/schema/beans"</span></span><br><span class="line">       xmlns:xsi=<span class="string">"http://www.w3.org/2001/XMLSchema-instance"</span></span><br><span class="line">       xsi:schemaLocation=<span class="string">"http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd"</span>&gt;</span><br><span class="line">    &lt;!-- 若没写id，则默认为com.test.Man#0,#0为一个计数形式 --&gt;</span><br><span class="line">    &lt;bean id="man" class="com.test.Man"&gt;&lt;/bean&gt;</span><br><span class="line">&lt;/beans&gt;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="comment">//加载项目中的spring配置文件到容器</span></span><br><span class="line">        <span class="comment">//ApplicationContext context = new ClassPathXmlApplicationContext("resouces/applicationContext.xml");</span></span><br><span class="line">        <span class="comment">//加载系统盘中的配置文件到容器</span></span><br><span class="line">        ApplicationContext context = <span class="keyword">new</span> FileSystemXmlApplicationContext(<span class="string">"E:/Spring/applicationContext.xml"</span>);</span><br><span class="line">        <span class="comment">//从容器中获取对象实例</span></span><br><span class="line">        Man man = context.getBean(Man.class);</span><br><span class="line">        man.driveCar();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
@@ -713,8 +713,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/Spring Cloud 微服务架构.html" rel="next" title="SpringCloud">
-                <i class="fa fa-chevron-left"></i> SpringCloud
+              <a href="/GitHub-hexo搭建个人博客详细教程.html" rel="next" title="GitHub+hexo搭建个人博客详细教程">
+                <i class="fa fa-chevron-left"></i> GitHub+hexo搭建个人博客详细教程
               </a>
             
           </div>
@@ -722,6 +722,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/学习、工作中所遇到的问题与解决办法.html" rel="prev" title="学习、工作中所遇到的问题与解决办法">
+                学习、工作中所遇到的问题与解决办法 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -803,7 +807,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-count">6</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -814,7 +818,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-count">3</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -825,7 +829,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-count">6</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -922,7 +926,7 @@
     
       <span class="post-meta-item-text">本站总字数&#58;</span>
     
-    <span title="本站总字数">5.6k</span>
+    <span title="本站总字数">14.8k</span>
   
 </div>
 
