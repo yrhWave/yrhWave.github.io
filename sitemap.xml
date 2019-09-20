@@ -2,9 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>yrhcoding.top/hello-world.html</loc>
+    
+    <lastmod>2019-09-20T06:43:41.445Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>yrhcoding.top/GitHub-hexo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E8%AF%A6%E7%BB%86%E6%95%99%E7%A8%8B.html</loc>
     
-    <lastmod>2019-09-20T03:28:48.750Z</lastmod>
+    <lastmod>2019-09-20T06:07:12.674Z</lastmod>
     
   </url>
   
@@ -40,13 +47,6 @@
     <loc>yrhcoding.top/hot/index.html</loc>
     
     <lastmod>2019-08-13T07:09:10.563Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>yrhcoding.top/hello-world.html</loc>
-    
-    <lastmod>2019-08-09T12:51:54.596Z</lastmod>
     
   </url>
   
