@@ -115,18 +115,19 @@
 <meta name="description" content="spring框架知识点总结，IOC、AOP、DI等重要概念原理">
 <meta name="keywords" content="spring">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Spring">
+<meta property="og:title" content="Spring学习总结">
 <meta property="og:url" content="yrhcoding.top/Spring学习总结.html">
 <meta property="og:site_name" content="Nine&#39;s Blog">
 <meta property="og:description" content="spring框架知识点总结，IOC、AOP、DI等重要概念原理">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="https://ronghua-yu-blog.oss-cn-beijing.aliyuncs.com/%E5%9B%BE%E5%BA%8A/blog/Spring%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84%E5%9B%BE.jpg">
+<meta property="og:image" content="https://i.loli.net/2019/09/26/mYtpbxZKCDfq4G9.jpg">
 <meta property="og:image" content="https://ronghua-yu-blog.oss-cn-beijing.aliyuncs.com/%E5%9B%BE%E5%BA%8A/blog/applicationContext%E7%BB%A7%E6%89%BF%E7%BB%93%E6%9E%84.png">
-<meta property="og:updated_time" content="2019-08-23T08:50:28.275Z">
+<meta property="og:image" content="https://ronghua-yu-blog.oss-cn-beijing.aliyuncs.com/%E5%9B%BE%E5%BA%8A/blog/spring_aop%E5%9C%BA%E6%99%AF.png">
+<meta property="og:updated_time" content="2019-09-26T02:50:55.322Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Spring">
+<meta name="twitter:title" content="Spring学习总结">
 <meta name="twitter:description" content="spring框架知识点总结，IOC、AOP、DI等重要概念原理">
-<meta name="twitter:image" content="https://ronghua-yu-blog.oss-cn-beijing.aliyuncs.com/%E5%9B%BE%E5%BA%8A/blog/Spring%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84%E5%9B%BE.jpg">
+<meta name="twitter:image" content="https://i.loli.net/2019/09/26/mYtpbxZKCDfq4G9.jpg">
 
 
 
@@ -162,7 +163,7 @@
 
 
 
-  <title>Spring | Nine's Blog</title>
+  <title>Spring学习总结 | Nine's Blog</title>
   
 
 
@@ -358,7 +359,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Spring</h1>
+          <h1 class="post-title" itemprop="name headline">Spring学习总结</h1>
         
 
         <div class="post-meta">
@@ -420,7 +421,7 @@
 
           
           
-             <span id="/Spring学习总结.html" class="leancloud_visitors" data-flag-title="Spring">
+             <span id="/Spring学习总结.html" class="leancloud_visitors" data-flag-title="Spring学习总结">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -486,7 +487,8 @@
       
 
       
-        <h1 id="Spring总结"><a href="#Spring总结" class="headerlink" title="Spring总结"></a>Spring总结</h1><h2 id="Spring简介"><a href="#Spring简介" class="headerlink" title="Spring简介"></a>Spring简介</h2><blockquote>
+        <p><strong>原文链接：<a href="http://yrhcoding.top/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E4%B9%8BOSI%E4%B8%83%E5%B1%82%E6%A8%A1%E5%9E%8B.html">Spring学习总结</a></strong></p>
+<h1 id="Spring学习总结"><a href="#Spring学习总结" class="headerlink" title="Spring学习总结"></a>Spring学习总结</h1><h2 id="Spring简介"><a href="#Spring简介" class="headerlink" title="Spring简介"></a>Spring简介</h2><blockquote>
 <p>Spring是一个开源的设计层面框架，它解决的是业务逻辑层和其他层的松耦合问题，因此它将面向接口的编程思想贯穿整个系统应用。Spring是于2003 年兴起的一个轻量级的Java 开发框架，由Rod Johnson创建。简单来说，Spring是一个分层的JavaSE/EE full-stack(一栈式) 轻量级开源框架。</p>
 </blockquote>
 <h4 id="J2EE三层架构体系"><a href="#J2EE三层架构体系" class="headerlink" title="J2EE三层架构体系"></a>J2EE三层架构体系</h4><ul>
@@ -507,7 +509,7 @@
 </li>
 </ul>
 <h4 id="轻量级"><a href="#轻量级" class="headerlink" title="轻量级"></a>轻量级</h4><p>Spring的出现取代了EJB的臃肿、低效、繁琐复杂、脱离现实。</p>
-<h4 id="Spring体系结构"><a href="#Spring体系结构" class="headerlink" title="Spring体系结构"></a>Spring体系结构</h4><p><img src="https://ronghua-yu-blog.oss-cn-beijing.aliyuncs.com/%E5%9B%BE%E5%BA%8A/blog/Spring%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84%E5%9B%BE.jpg" alt="Spring体系结构"></p>
+<h4 id="Spring体系结构"><a href="#Spring体系结构" class="headerlink" title="Spring体系结构"></a>Spring体系结构</h4><p><img src="https://i.loli.net/2019/09/26/mYtpbxZKCDfq4G9.jpg" alt></p>
 <h2 id="IOC"><a href="#IOC" class="headerlink" title="IOC"></a>IOC</h2><h4 id="IOC介绍"><a href="#IOC介绍" class="headerlink" title="IOC介绍"></a>IOC介绍</h4><blockquote>
 <p>IOC其是一种设计思想，将创建对象的权利交给Spring，由IOC统一加载和管理，让Spring去管理对象生命周期，极大的解决了程序耦合性高的问题。</p>
 </blockquote>
@@ -558,7 +560,7 @@
 <h2 id="AOP"><a href="#AOP" class="headerlink" title="AOP"></a>AOP</h2><blockquote>
 <p>在软件业，AOP为Aspect Oriented Programming的缩写，意为：[面向切面编程]，通过预编译方式和运行期动态代理实现程序功能的统一维护的一种技术。AOP是OOP的延续，是软件开发中的一个热点，也是Spring框架中的一个重要内容，使函数式编程降低，提高程序的可重用性，同时提高了开发的效率。</p>
 </blockquote>
-<p>![aop场景](<a href="https://ronghua-yu-blog.oss-cn-beijing.aliyuncs.com/图床/blog/spring" target="_blank" rel="noopener">https://ronghua-yu-blog.oss-cn-beijing.aliyuncs.com/图床/blog/spring</a> aop 场景.png)</p>
+<p><img src="https://ronghua-yu-blog.oss-cn-beijing.aliyuncs.com/%E5%9B%BE%E5%BA%8A/blog/spring_aop%E5%9C%BA%E6%99%AF.png" alt="aop场景"></p>
 <h4 id="spring术语"><a href="#spring术语" class="headerlink" title="spring术语"></a>spring术语</h4><ul>
 <li>切面：拦截器类，其中会定义切点以及通知</li>
 <li>通知：切面中的方法，包括：<ul>
@@ -635,11 +637,11 @@
   <!-- JS库 sweetalert 可修改路径 -->
   <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-  <p><span>本文标题:</span><a href="/Spring学习总结.html">Spring</a></p>
+  <p><span>本文标题:</span><a href="/Spring学习总结.html">Spring学习总结</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 九哥 的个人博客">九哥</a></p>
   <p><span>发布时间:</span>2019年08月20日 - 19:08</p>
-  <p><span>最后更新:</span>2019年08月23日 - 16:08</p>
-  <p><span>原始链接:</span><a href="/Spring学习总结.html" title="Spring">yrhcoding.top/Spring学习总结.html</a>
+  <p><span>最后更新:</span>2019年09月26日 - 10:09</p>
+  <p><span>原始链接:</span><a href="/Spring学习总结.html" title="Spring学习总结">yrhcoding.top/Spring学习总结.html</a>
     <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="yrhcoding.top/Spring学习总结.html" aria-label="复制成功！"></i></span>
   </p>
   <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p>
@@ -892,7 +894,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Spring总结"><span class="nav-number">1.</span> <span class="nav-text">Spring总结</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Spring简介"><span class="nav-number">1.1.</span> <span class="nav-text">Spring简介</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#J2EE三层架构体系"><span class="nav-number">1.1.0.1.</span> <span class="nav-text">J2EE三层架构体系</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#轻量级"><span class="nav-number">1.1.0.2.</span> <span class="nav-text">轻量级</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Spring体系结构"><span class="nav-number">1.1.0.3.</span> <span class="nav-text">Spring体系结构</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#IOC"><span class="nav-number">1.2.</span> <span class="nav-text">IOC</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#IOC介绍"><span class="nav-number">1.2.0.1.</span> <span class="nav-text">IOC介绍</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#IOC思想前瞻"><span class="nav-number">1.2.0.2.</span> <span class="nav-text">IOC思想前瞻</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Spring-IOC-容器"><span class="nav-number">1.2.0.3.</span> <span class="nav-text">Spring IOC 容器</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#BeanFactory"><span class="nav-number">1.2.0.4.</span> <span class="nav-text">BeanFactory</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#ApplicationContext"><span class="nav-number">1.2.0.5.</span> <span class="nav-text">ApplicationContext</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#示例"><span class="nav-number">1.2.0.6.</span> <span class="nav-text">示例</span></a></li></ol></li></ol><li class="nav-item nav-level-2"><a class="nav-link" href="#DI-依赖注入"><span class="nav-number">1.3.</span> <span class="nav-text">DI(依赖注入)</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#DI关键点"><span class="nav-number">1.3.0.1.</span> <span class="nav-text">DI关键点</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Spring装配bean的三种方式"><span class="nav-number">1.3.0.2.</span> <span class="nav-text">Spring装配bean的三种方式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#基于注解的方式"><span class="nav-number">1.3.0.3.</span> <span class="nav-text">基于注解的方式</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#AOP"><span class="nav-number">1.4.</span> <span class="nav-text">AOP</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#spring术语"><span class="nav-number">1.4.0.1.</span> <span class="nav-text">spring术语</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#示例-1"><span class="nav-number">1.4.0.2.</span> <span class="nav-text">示例</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#事物"><span class="nav-number">1.5.</span> <span class="nav-text">事物</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#编程式事务"><span class="nav-number">1.5.0.1.</span> <span class="nav-text">编程式事务</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#声明式事务"><span class="nav-number">1.5.0.2.</span> <span class="nav-text">声明式事务</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#事务隔离级别"><span class="nav-number">1.6.</span> <span class="nav-text">事务隔离级别</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#事务传播级别"><span class="nav-number">1.6.0.1.</span> <span class="nav-text">事务传播级别</span></a></li></ol></li></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Spring学习总结"><span class="nav-number">1.</span> <span class="nav-text">Spring学习总结</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Spring简介"><span class="nav-number">1.1.</span> <span class="nav-text">Spring简介</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#J2EE三层架构体系"><span class="nav-number">1.1.0.1.</span> <span class="nav-text">J2EE三层架构体系</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#轻量级"><span class="nav-number">1.1.0.2.</span> <span class="nav-text">轻量级</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Spring体系结构"><span class="nav-number">1.1.0.3.</span> <span class="nav-text">Spring体系结构</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#IOC"><span class="nav-number">1.2.</span> <span class="nav-text">IOC</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#IOC介绍"><span class="nav-number">1.2.0.1.</span> <span class="nav-text">IOC介绍</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#IOC思想前瞻"><span class="nav-number">1.2.0.2.</span> <span class="nav-text">IOC思想前瞻</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Spring-IOC-容器"><span class="nav-number">1.2.0.3.</span> <span class="nav-text">Spring IOC 容器</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#BeanFactory"><span class="nav-number">1.2.0.4.</span> <span class="nav-text">BeanFactory</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#ApplicationContext"><span class="nav-number">1.2.0.5.</span> <span class="nav-text">ApplicationContext</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#示例"><span class="nav-number">1.2.0.6.</span> <span class="nav-text">示例</span></a></li></ol></li></ol><li class="nav-item nav-level-2"><a class="nav-link" href="#DI-依赖注入"><span class="nav-number">1.3.</span> <span class="nav-text">DI(依赖注入)</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#DI关键点"><span class="nav-number">1.3.0.1.</span> <span class="nav-text">DI关键点</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Spring装配bean的三种方式"><span class="nav-number">1.3.0.2.</span> <span class="nav-text">Spring装配bean的三种方式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#基于注解的方式"><span class="nav-number">1.3.0.3.</span> <span class="nav-text">基于注解的方式</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#AOP"><span class="nav-number">1.4.</span> <span class="nav-text">AOP</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#spring术语"><span class="nav-number">1.4.0.1.</span> <span class="nav-text">spring术语</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#示例-1"><span class="nav-number">1.4.0.2.</span> <span class="nav-text">示例</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#事物"><span class="nav-number">1.5.</span> <span class="nav-text">事物</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#编程式事务"><span class="nav-number">1.5.0.1.</span> <span class="nav-text">编程式事务</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#声明式事务"><span class="nav-number">1.5.0.2.</span> <span class="nav-text">声明式事务</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#事务隔离级别"><span class="nav-number">1.6.</span> <span class="nav-text">事务隔离级别</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#事务传播级别"><span class="nav-number">1.6.0.1.</span> <span class="nav-text">事务传播级别</span></a></li></ol></li></div>
             
 
           </div>
